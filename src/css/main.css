@@ -1,0 +1,779 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS Section */
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.fa-bars{
+    display: none !important;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    transition: 0.4s all;
+    z-index: 1;
+}
+.navbarDiv{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin: 0 auto;
+    width: 70%;
+    padding: 0px 10px;    
+    grid-gap: 10px;
+}
+.navbarDiv #navbarButtonsDiv{
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content max-content max-content;
+    align-items: center;
+    grid-gap: 15px;
+    font-size: 0.9em;
+}
+#navbarLogo img{
+    max-width: 200px;
+}
+.navbarButton{
+    color: white;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-shadow: 1px 0 white;
+    letter-spacing: 1px;
+}
+.navbarJoinUs{
+    text-decoration: none;
+    padding: 7px;
+    background-color: rgb(230,160,60);
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+}
+.signUpBanner{
+    background-image: url("../Resimler/hero-man.jpg");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.signUpBannerDiv{
+    display: grid;
+    grid-template-columns: auto;
+    width: 70%;
+    margin: 0 auto;
+    color: White;
+    padding: 20px;
+    padding-top: 180px;
+    padding-bottom: 70px;   
+    grid-gap: 20px;
+}
+
+.bannerName{
+    font-size: 1em;
+}
+.bannerName > span{
+    padding: 6px 12px;
+    background-color: rgb(60,84,142);
+    border-radius: 5px;
+    color:white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.722);
+    font-weight: bolder;
+
+}
+.bannerTitle{
+    font-size: 4.5em;
+    font-weight: bolder;
+    max-width: 450px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.722);
+}
+.bannerContent{
+    padding: 5px 15px;
+    background-color: #000000b8;
+    font-size: 1.4em;
+    word-spacing: 2px;
+    font-weight: bolder;
+    line-height: 1.3;
+}
+.bannerButtons{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 40px;
+    padding: 5px 25px;
+    font-size: 1.3em;
+    width: 280px;
+    text-align: center;
+}
+.bannerButtons > a {
+    padding:10px 20px;
+    background-color: rgb(60,84,142);
+    text-decoration: none;
+    font-weight: bolder;
+    color:white;
+    border-radius: 5px;
+}
+.bannerButtons > #details{
+    background-color: rgba(0, 0, 0, 0.33);
+    border:2px solid white;
+
+}
+.scrolled{
+    background-color: #355592;
+    transition: 0.4s all;
+}
+
+.statistics{
+    background-color: rgb(242,248,254);
+    padding:30px;
+    text-align: center;
+}
+.statistics > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 70%;
+    grid-gap:20px;
+    margin: 0 auto;
+
+}
+.stCard{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+}
+
+.stNumber{
+    color: rgb(60,84,141);
+    font-size:1.4em;
+    font-weight: bolder;
+    text-shadow: 1px 0px rgb(60,84,141);
+}
+.stText{
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 0px black;
+}
+.classes{
+    background-color: white;
+    background: linear-gradient( 258deg, #F6F6F6 0%, #F6F6F6 53%, #f6f6f69f 35%, #f6f6f600 30% );
+    padding: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.classesDiv{
+    width:70%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+}
+.clTitle{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: rgb(60,84,141);
+
+}
+.clDesc{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.clTabDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.clTabButtons{
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    width: 100%;
+    grid-gap: 50px;
+    justify-content: center;
+}
+.clTabButton{
+    padding:10px 18px;
+    color: white;
+    background-color: rgb(60,84,141);
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+.tabActive{
+    background-color: rgb(230,160,60);
+    box-shadow: rgb(230,160,60) 0px 2px 8px 0px;
+}
+.tabActive:before {
+    content: "";
+    position: absolute;
+    /* top: 50%; */
+    /* right: 67px; */
+    transform: translateY(12%) translateX(11%) rotate(45deg);
+    border-top: 28px solid transparent;
+    border-right: 28px solid rgb(230,160,60);
+    width: 0;
+    height: 0;
+}
+.clTab{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px;    
+    margin-top: 50px;
+    grid-gap:30px;
+}
+.activeDiv{
+    display:grid;
+}
+.clTabImgDiv{
+    display:flex;
+}
+.clTabImgDiv > img{
+    width:90%;
+    margin: 0 auto;
+}
+.clTabTextDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:24px;
+}
+.clTabText{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+}
+.clTabText .clTabTitleSpan{
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+.clTabText .clTabDescSpan{
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+
+.bmi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    width: 70%;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
+.yourBmiDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    grid-gap: 10px;
+}
+.yourBmiDiv > img{
+    width:90%;
+    margin: 0 auto;
+}
+.bmiCalculator{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    line-height: 1.2em;
+}
+.bmiCalculatorTitle{
+    font-size: 1.8em;
+    font-weight: bolder;
+    color: rgb(60,84,141);
+}
+.bmiCalculatorDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 10px;
+}
+.bmiArrow{
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(230,160,60);
+    
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.trainers{
+    background-color: rgb(242,248,254);
+}
+.trainersDiv{
+    width:70%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 20px;
+    width: 70%;
+    grid-gap: 50px;
+}
+.trainersTitle{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: rgb(60,84,141);
+}
+.trainersDesc{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.trainersImgDivs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:40px;
+}
+.trainersImgDivs img{
+    width: 100%;
+    border: 2px solid rgb(230,160,60);
+    border-radius: 8px;
+}
+
+.trainerImgDiv{
+  position: relative;
+}
+.trainerImgDiv:after {
+    position: absolute;
+    content: "";
+    width: 30%;
+    left: 35%;
+    top: 0;
+    height: 99%;
+    top: calc(0% - 10px);
+    border-top: 10px solid rgb(60,84,141);
+    border-bottom: 10px solid rgb(60,84,141);
+    transition: 1s all;
+  }
+  .trainerImgDiv:before {
+    position: absolute;
+    content: "";
+    width: 101%;
+    left: calc(0% - 10px);
+    top: 35%;
+    height: 30%;
+    border-left: 10px solid rgb(60,84,141);
+    border-right: 10px solid rgb(60,84,141);
+    transition: 1s all;
+  }
+.trainerCard{
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: -100px;
+}
+.trainerWindow{
+    width:50%;
+    margin:0 auto;
+    color:white;
+    padding:20px 10px;
+    background-color: rgb(60,84,141);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+    display: none;
+    transition: 1s all;
+}
+.trainerWindow::before{
+    position: absolute;
+    content: "";
+    width: 50%;
+    left: calc(25% - 30px);
+    top: 20%;
+    height: 60%;
+    border-left: 30px solid rgb(60,84,141);
+    border-right: 30px solid rgb(60,84,141);
+}
+.trainerWindowTitle{
+    font-size: 1.2em;
+}
+.trainerWindowDesc{
+    font-size: 0.8em;
+}
+.trainerWindowActive{
+    display: grid;
+    transition: 1s all;
+}
+
+.purchaseDiv{
+    width:70%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 20px;
+    width: 70%;
+    grid-gap: 50px;
+}
+.purchaseTitle{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: rgb(60,84,141);
+}
+.purchaseDesc{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.purchaseImgDivs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.purchaseImgDivs img{
+    width: 100%;
+}
+.purchaseImgDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 4px 4px 12px #aaaaaa;
+}
+.purchaseCard{
+    padding:10px;
+}
+.purchaseWindow{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:10px;
+}
+.purchaseProductName{
+    font-size:1.2em;
+    font-weight: bolder;
+}
+.purchasePrice{
+    font-size:0.9em;
+    font-weight: bolder;
+}
+.purchaseButtonDiv{
+    padding: 0px 20px;
+    font-size:0.9em;
+    font-weight: bolder;
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+.purchaseButtonDiv a{
+    text-decoration: none;
+    color:black;
+    font-size:0.9em;
+}
+.client{
+    background-color: rgb(242,248,254);
+}
+.clientDiv{
+    width:70%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 20px;
+    width: 70%;
+    grid-gap: 50px;
+}
+.clientTitle{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: rgb(60,84,141);
+}
+.clientDesc{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.clientCartDivs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px 35px;
+    grid-gap:20px;
+    align-items: center;
+
+}
+.clientCartDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-gap: 10px; */
+}
+.clientCartDesc{
+    text-align: left;
+    line-height: 1.3em;
+    color: white;
+    background-color: rgb(60,84,141);
+    font-size: 0.8em;
+    padding: 16px 20px;
+    margin-top:10px;
+}
+.clientCartDescs:before {
+    content: "";
+    position: relative;
+    /* position: absolute; */
+    height: 0;
+    width: 0;
+    left: calc(0px - 20px);
+    bottom: 0px;
+    top: calc(100% + 53px);
+    border-top: 38px solid rgb(132,149,187);
+    border-left: 30px solid transparent;
+}
+  
+.clientCartBottomEffect{
+    border-top: 30px solid rgb(132,149,187);
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+}
+.clientCartBottomEffect2{
+    height: 30px;
+    width: 100%;
+    background: rgb(242,248,254);
+    margin-top: -30px;
+}
+.clientImg{
+    width: 50px;
+}
+.clientInfo{
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    grid-gap:10px;
+}
+.clientJobDiv{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: left;
+    grid-gap: 10px;
+    
+}
+.clientJobText{
+    font-weight: bolder;
+    font-size: 0.9em;
+}
+.clientJobTitle{
+    font-size: 0.8em;
+}
+.clientImgDiv{
+}
+.clientImg{
+
+    border-radius: 50px;
+}
+
+.contactDiv{
+    width:70%;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 50px 20px;
+    width: 70%;
+    grid-gap: 50px;
+}
+.contactTitle{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: rgb(60,84,141);
+}
+.contactDesc{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.contactBottomDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+.contactFormDiv{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    grid-gap:20px;
+}
+.contactFormTop{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    line-height: 1.4em;
+}
+.contactFormTop > div{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.contactFormTop > div > :nth-child(1){
+    font-weight: bolder;
+    font-size: 1em;
+}
+.contactFormTop > div > :nth-child(2){
+    font-size: 0.8em;
+}
+.contactMapDiv > iframe{
+    width: 100%;
+}
+.contactFormBottom{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+    grid-gap: 10px;
+}
+.contactFormBottom > input, textarea{
+    background-color: rgb(242,248,254);
+    border-radius: 6px;
+    padding:10px;
+    border: 1px solid transparent;
+}
+.contactFormTitle{
+    font-size:1.2em;
+    font-weight: 600;
+}
+
+.footer{
+    background-color: rgb(60,84,141);
+    padding:10px;
+    color: white;
+}
+.footerDiv{
+    width:70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:10px;
+}
+.footerDiv > img{
+    max-width: 160px;
+}
+.footerDesc{
+    font-size:0.8em;
+}
+.footerLinks{
+    padding:20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.footerLinks > div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:12px;
+}
+.footerLinks a {
+    color:white;
+    font-size:0.8em;
+    text-decoration:none;
+}
+.footerTitle{
+    font-size:1.3em;
+}
+
+@media screen and (max-width: 600px) {
+     .hamburgerOpened{
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        padding: 30px;
+        background-color: #355592;
+    }
+    .hamburgerBackground{
+        background-color: #355592;
+        transition: 0.4s all;
+    }
+    .fa-bars{
+        color:white;
+        text-align: right;
+        display: block!important;
+    }
+    .navbar #navbarButtonsDiv{
+        display: none;
+    }
+    .navbar{
+        z-index: 1;
+    }
+
+    .classesDiv{
+        margin:0px;
+        padding:0px;
+        width: 100%;
+    }
+
+    .clTabButtons{
+        grid-template-columns: 1fr;
+    }
+    .clTab{
+        grid-template-columns: 1fr;
+    }
+    .bmi{
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+    .trainersImgDivs{
+        grid-template-columns: 1fr;
+    }
+
+    .trainerImgDiv:after {
+        width: 50%;
+        left: 25%;
+        transition: 1s all;
+    }
+    .trainerImgDiv:before {
+        top: 25%;
+        height: 50%;
+        transition: 1s all;
+    }
+    .purchaseImgDivs{
+        grid-template-columns: 1fr;
+        grid-gap:40px;
+    }
+    .clientCartDivs{
+        padding: 0px;
+        grid-template-columns: 1fr;
+    }
+    .contactBottomDiv{
+        grid-template-columns: 1fr;
+    }
+}

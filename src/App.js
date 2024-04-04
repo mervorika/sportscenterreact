@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/main.css";
+import "./js/main.js";
+
+import Navbar from "./components/navbar";
+import SignUpBanner from "./components/signupbanner";
+import Statistics from "./components/statistics";
+import Classes from "./components/classes";
+import Bmi from "./components/bmi";
+import Trainers from "./components/trainers";
+import Purchase from "./components/purchase";
+import Client from "./components/client";
+import Contact from "./components/contact";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Powerfull Trainer</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <Navbar />
+        <SignUpBanner />
+        <Statistics />
+        <Classes />
+        <Bmi />
+        <Trainers />
+        <Purchase />
+        <Client />
+        <Contact />
+      </div>
     </div>
   );
 }
